@@ -4,9 +4,9 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.util.Log
-import com.example.david.diyrules.ReceiverMediator
-import com.example.david.diyrules.ruleEvents.PowerConnectedEvent
-import com.example.david.diyrules.ruleEvents.PowerDisconnectedEvent
+import com.example.david.diyrules.mediator.EventMediator
+import com.example.david.diyrules.triggers.implementation.PowerConnectedEvent
+import com.example.david.diyrules.triggers.implementation.PowerDisconnectedEvent
 
 
 // to read power state: register a BroadcastReceiver for ACTION_POWER_CONNECTED and ACTION_POWER_DISCONNECTED
@@ -24,11 +24,11 @@ object PowerConnectedReceiver: BroadcastReceiver() {
 
         if(action == Intent.ACTION_POWER_CONNECTED){
             Log.d(tag, "power connected;    1")
-            ReceiverMediator.onEvent(PowerConnectedEvent)
+            EventMediator.onEvent(PowerConnectedEvent)
 
         } else if (action == Intent.ACTION_POWER_DISCONNECTED){
             Log.d(tag, "power disconnected; 0")
-            ReceiverMediator.onEvent(PowerDisconnectedEvent)
+            EventMediator.onEvent(PowerDisconnectedEvent)
         }
     }
 
