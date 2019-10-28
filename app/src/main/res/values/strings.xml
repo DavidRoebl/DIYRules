@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">diyrules</string>
+    <string name="app_name">AutoMate</string>
     <string name="power_connection_state_text">Power Connection State %1$s</string>
     <string name="power_connected">Connected</string>
     <string name="power_disconnected">Disconnected</string>
